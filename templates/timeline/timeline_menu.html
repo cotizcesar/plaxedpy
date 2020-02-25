@@ -1,8 +1,0 @@
-<ul class="rounded bg-black-t list-none p-0 m-0 mb-3">
-    <li><h6 class="m-0 p-3"><i class="far fa-compass fa-fw text-info mr-1"></i> Timelines</h6></li>
-    <hr class="my-0">
-    {% if user.is_authenticated %}
-    <li><a class="border-bottom border-black-t d-block text-white py-3 pl-4 pr-3 {% if request.resolver_match.url_name == 'timeline_following' %}bg-black-t{% endif %}" href="{% url 'timeline_following' %}"><i class="fas fa-exchange-alt fa-fw text-info mr-1"></i> Following</a></li>
-    {% endif %}
-    <li><a class="border-black-t d-block text-white py-3 pl-4 pr-3 {% if request.resolver_match.url_name == 'timeline_public' %}bg-black-t{% endif %}" href="{% url 'timeline_public' %}"><i class="fas fa-globe fa-fw text-info mr-1"></i> Public</a></li>
-</ul>

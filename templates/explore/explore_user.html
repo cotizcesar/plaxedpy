@@ -1,7 +1,0 @@
-{% load thumbnail %}
-{% if user.is_authenticated %}
-<div class="mb-3 bg-black-t rounded">
-    <img class="img-fluid rounded-top" src="{{user.userprofile.header|thumbnail_url:'header_255x143'|default:'/media/user/header/header_255x143.png'}}" alt="{{user.get_full_name}} @{{user.username}} header.">
-    {% include 'user/user.html' %}
-</div>
-{% endif %}
